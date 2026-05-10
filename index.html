@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Antonio's Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta property="og:title" content="Antonio's Portfolio">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Poppins:wght@400;500;700&family=Inter:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav" id="mainNav">
+    <span class="nav-logo">Antonio.</span>
+    <div class="nav-links" id="navLinks">
+      <span data-target="home">HOME</span>
+      <span data-target="about">ABOUT</span>
+      <span data-target="journey">JOURNEY</span>
+      <span data-target="skills">SKILLS</span>
+      <span data-target="contact">CONTACT</span>
+    </div>
+    <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <div class="nav-mobile" id="mobileNav">
+    <span data-target="home" onclick="navTo('home')">HOME</span>
+    <span data-target="about" onclick="navTo('about')">ABOUT</span>
+    <span data-target="journey" onclick="navTo('journey')">JOURNEY</span>
+    <span data-target="skills" onclick="navTo('skills')">SKILLS</span>
+    <span data-target="contact" onclick="navTo('contact')">CONTACT</span>
+  </div>
+
+  <!-- Home Section -->
+  <section class="section home-section" id="home">
+    <div class="home-text">
+      <span class="tag-label">Welcome to my portfolio</span>
+      <h1 class="home-name">Hi, ANTONIO, JR C. NIPAYA</h1>
+      <span class="home-title">IT Student & Web Developer</span>
+      <p class="home-desc">
+        I love taking complex technical requirements<br>
+        and turning them into clean, user-friendly experiences.
+      </p>
+      <div class="home-buttons">
+        <button class="btn-outline" onclick="navTo('skills')">View Projects</button>
+        <button class="btn-outline" onclick="navTo('contact')">Get in Touch</button>
+      </div>
+    </div>
+    <div class="home-photo">
+      <img src="eyy.jpeg" alt="Antonio Jr C. Nipaya">
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="about-inner">
+      <div class="about-photo">
+        <img src="eyy.jpeg" alt="Antonio Jr C. Nipaya">
+      </div>
+      <div class="about-text">
+        <h2 class="section-title">About <span class="accent">Me</span></h2>
+        <p class="about-role">Web Developer</p>
+        <p class="about-desc">
+          I'm a web developer who enjoys creating clean and user-friendly websites.
+          I like turning ideas into real projects that people can interact with online.
+          I've been building my skills by working on different projects and learning new
+          technologies. I focus on writing code that is simple, organized, and efficient.
+          I also pay attention to design to make sure the user experience feels smooth
+          and modern. I'm always looking for ways to improve and grow as a developer.
+        </p>
+        <button class="btn-cyan" onclick="navTo('journey')">View My Journey</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey Section -->
+  <section class="section journey-section" id="journey">
+    <h2 class="section-title centered">My <span class="accent">Journey</span></h2>
+    <div class="journey-columns">
+      <!-- Education -->
+      <div class="journey-col">
+        <h3 class="journey-col-title">Education</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">2024 - Present</div>
+            <div class="timeline-place">BSIT - Opol Community College</div>
+            <div class="timeline-desc">Currently expanding my skills in web development, programming, and modern technologies while building real-world projects.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2022 - 2024</div>
+            <div class="timeline-place">TVL - Opol National Secondary Technical School</div>
+            <div class="timeline-desc">Developed technical drafting skills, attention to detail, and creativity. Recognized as Mr. Eco Fashion Show Grand Champion 2024.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2019 - 2022</div>
+            <div class="timeline-place">Junior High - Opol National Secondary Technical School</div>
+            <div class="timeline-desc">Gained practical knowledge and improved problem-solving skills through academic and technical activities.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2012 - 2018</div>
+            <div class="timeline-place">Elementary - Opol Central School</div>
+            <div class="timeline-desc">Built a strong foundation in basic education while developing discipline, creativity, and early interest in learning.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience -->
+      <div class="journey-col">
+        <h3 class="journey-col-title">Experience</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">2024 - Present</div>
+            <div class="timeline-place">Web Developer (Freelance)</div>
+            <div class="timeline-desc">Building responsive websites using HTML, CSS, and JavaScript with clean design and user-friendly layouts.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2022 - 2024</div>
+            <div class="timeline-place">Personal Projects</div>
+            <div class="timeline-desc">Developed school projects improving front-end development and problem-solving skills.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2022</div>
+            <div class="timeline-place">School Projects</div>
+            <div class="timeline-desc">Practiced debugging and code optimization for better website performance.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section skills-section" id="skills">
+    <h2 class="section-title centered">My <span class="accent">Skills</span></h2>
+    <div class="skills-columns">
+      <!-- Coding Skills -->
+      <div class="skills-col">
+        <h3 class="skills-col-title">Coding Skills</h3>
+        <div class="skill-row">
+          <div class="skill-meta">
+            <span class="skill-name">HTML</span>
+            <span class="skill-pct">85%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-pct="85%"></div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-meta">
+            <span class="skill-name">CSS</span>
+            <span class="skill-pct">80%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-pct="80%"></div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-meta">
+            <span class="skill-name">JavaScript</span>
+            <span class="skill-pct">65%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-pct="65%"></div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-meta">
+            <span class="skill-name">Python</span>
+            <span class="skill-pct">70%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-pct="70%"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Professional Skills -->
+      <div class="skills-col">
+        <h3 class="skills-col-title">Professional Skills</h3>
+        <div class="skill-row">
+          <div class="skill-meta">
+            <span class="skill-name">Web Design</span>
+            <span class="skill-pct">75%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-pct="75%"></div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-meta">
+            <span class="skill-name">Web Development</span>
+            <span class="skill-pct">70%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-pct="70%"></div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-meta">
+            <span class="skill-name">Graphic Design</span>
+            <span class="skill-pct">50%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-pct="50%"></div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-meta">
+            <span class="skill-name">SEO</span>
+            <span class="skill-pct">40%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-pct="40%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact-section" id="contact">
+    <div class="contact-header">
+      <h2 class="section-title">Contact <span class="accent">Me!</span></h2>
+      <p class="contact-sub">I'd love to hear from you. Feel free to reach out through any of the channels below.</p>
+    </div>
+    <div class="contact-body">
+      <div class="contact-details">
+        <div class="contact-item">
+          <span class="contact-label">Email</span>
+          <span class="contact-value" onclick="copyToClipboard('antoniojrnipaya10@gmail.com')">
+            antoniojrnipaya10@gmail.com
+          </span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">School Email</span>
+          <span class="contact-value" onclick="copyToClipboard('occ.nipaya.antonio@gmail.com')">
+            occ.nipaya.antonio@gmail.com
+          </span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Phone</span>
+          <span class="contact-value" onclick="window.open('tel:+639359725937')">
+            +639359725937
+          </span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Phone 2</span>
+          <span class="contact-value" onclick="window.open('tel:+639525664719')">
+            +639525664719
+          </span>
+        </div>
+      </div>
+      <div class="contact-socials">
+        <p class="socials-title">Connect on Socials</p>
+        <div class="social-buttons">
+          <button class="btn-dark" onclick="window.open('https:https://www.facebook.com/antonio.nipaya.2025')">Facebook</button>
+          <button class="btn-dark" onclick="window.open('https://instagram.com', '_blank')">Instagram</button>
+          <button class="btn-dark" onclick="window.open('https://discord.com', '_blank')">Discord</button>
+          <button class="btn-dark" onclick="window.open('https://messenger.com', '_blank')">Messenger</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-left">
+      <span class="footer-name">ANTONIO</span>
+      <span class="footer-copy">&copy; 2025 All rights reserved.</span>
+    </div>
+    <div class="footer-right">
+      <div class="footer-col">
+        <span class="footer-col-title">NAVIGATION</span>
+        <span onclick="navTo('home')">Home</span>
+        <span onclick="navTo('about')">About</span>
+        <span onclick="navTo('journey')">Journey</span>
+        <span onclick="navTo('skills')">Skills</span>
+        <span onclick="navTo('contact')">Contact</span>
+      </div>
+      <div class="footer-col">
+        <span class="footer-col-title">CONTACT</span>
+        <span onclick="copyToClipboard('antoniojrnipaya10@gmail.com')">antoniojrnipaya10@gmail.com</span>
+        <span onclick="window.open('tel:+639359725937')">+639359725937</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+
+    function navTo(id) {
+      const target = document.getElementById(id);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+
+      document.getElementById('mobileNav').classList.remove('open');
+      document.getElementById('hamburger').classList.remove('open');
+    }
+
+ 
+    function toggleMenu() {
+      document.getElementById('mobileNav').classList.toggle('open');
+      document.getElementById('hamburger').classList.toggle('open');
+    }
+
+
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(() => {
+
+        const feedback = document.createElement('div');
+        feedback.textContent = 'Copied!';
+        feedback.style.cssText = `
+          position: fixed; top: 20px; right: 20px; background: #00b4cc; 
+          color: white; padding: 12px 24px; border-radius: 8px; 
+          font-family: 'Inter', sans-serif; font-size: 14px; 
+          z-index: 10000; animation: slideIn 0.3s ease;
+        `;
+        document.body.appendChild(feedback);
+        
+        setTimeout(() => {
+          feedback.remove();
+        }, 2000);
+      });
+    }
+
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('[data-target]');
+
+    function updateActiveNav() {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (window.scrollY >= (sectionTop - 200)) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.dataset.target === current);
+      });
+    }
+
+    document.querySelectorAll('[data-target]').forEach(link => {
+      link.addEventListener('click', () => {
+        const targetId = link.dataset.target;
+        navTo(targetId);
+      });
+    });
+
+    // Nav shadow on scroll
+    window.addEventListener('scroll', () => {
+      document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 50);
+      updateActiveNav();
+    });
+
+    // Animate skill bars on scroll
+    const skillBars = document.querySelectorAll('.skill-bar-fill');
+    const skillObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const bar = entry.target;
+          const width = bar.dataset.pct;
+          bar.style.width = width;
+        }
+      });
+    }, { threshold: 0.3 });
+
+    skillBars.forEach(bar => {
+      skillObserver.observe(bar);
+    });
+
+    // Close mobile menu on outside click
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.nav') && !e.target.closest('.nav-hamburger')) {
+        document.getElementById('mobileNav').classList.remove('open');
+        document.getElementById('hamburger').classList.remove('open');
+      }
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.getElementById('mobileNav').classList.remove('open');
+        document.getElementById('hamburger').classList.remove('open');
+      }
+    });
+  </script>
+
+  <style>
+    /* Quick feedback animation */
+    @keyframes slideIn {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+  </style>
+</body>
+</html>
