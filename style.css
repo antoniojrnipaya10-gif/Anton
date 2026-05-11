@@ -828,6 +828,20 @@ body.dark-mode .skills-col-title {
   color: #e0e0e0;
 }
 
+body.dark-mode .journey-section {
+  background: #0f0f0f;
+}
+
+body.dark-mode .timeline-item {
+  background: #1a1a1a;
+  border-color: #2a2a2a;
+  border-left-color: #00b4cc;
+}
+
+body.dark-mode .timeline-item:hover {
+  box-shadow: 0 4px 16px rgba(0, 180, 204, 0.15);
+}
+
 body.dark-mode .timeline-year {
   color: #00b4cc;
 }
@@ -838,6 +852,10 @@ body.dark-mode .timeline-place {
 
 body.dark-mode .timeline-desc {
   color: #b0b0b0;
+}
+
+body.dark-mode .skills-section {
+  background: #0f0f0f;
 }
 
 body.dark-mode .skill-name,
