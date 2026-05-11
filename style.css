@@ -558,6 +558,26 @@ section {
   color: #555; 
 }
 
+.contact-item a {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #555;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-item a:hover {
+  color: #00b4cc;
+}
+
+body.dark-mode .contact-item a {
+  color: #e0e0e0;
+}
+
+body.dark-mode .contact-item a:hover {
+  color: #00b4cc;
+}
+
 .contact-socials { 
   flex: 1; 
   min-width: 220px; 
@@ -700,5 +720,220 @@ section {
   
   .footer-right { 
     gap: 28px; 
+  }
+}
+/* Dark/Light Mode Toggle Styles */
+.mode-toggle {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 1001;
+}
+
+.mode-btn {
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  position: relative;
+}
+
+.mode-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.sun-icon,
+.moon-icon {
+  transition: opacity 0.3s ease;
+}
+
+.mode-btn:not(.dark-mode-active) .moon-icon {
+  opacity: 0;
+}
+
+.mode-btn.dark-mode-active .sun-icon {
+  opacity: 0;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background: #0a0a0a;
+  color: #e0e0e0;
+}
+
+body.dark-mode .nav {
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(20px);
+}
+
+body.dark-mode .nav.scrolled {
+  background: rgba(10, 10, 10, 0.98);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .nav-logo,
+body.dark-mode .nav-links span {
+  color: #e0e0e0;
+}
+
+body.dark-mode .nav-links span.active {
+  color: #00b4cc;
+}
+
+body.dark-mode .section {
+  background: #0f0f0f;
+}
+
+body.dark-mode .home-section {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+}
+
+body.dark-mode .home-text,
+body.dark-mode .about-text {
+  color: #e0e0e0;
+}
+
+body.dark-mode .tag-label,
+body.dark-mode .home-title,
+body.dark-mode .about-role,
+body.dark-mode .home-desc,
+body.dark-mode .about-desc,
+body.dark-mode .contact-sub {
+  color: #b0b0b0;
+}
+
+body.dark-mode .section-title {
+  color: #e0e0e0;
+}
+
+body.dark-mode .accent {
+  background: linear-gradient(45deg, #00b4cc, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+body.dark-mode .journey-col-title,
+body.dark-mode .skills-col-title {
+  color: #e0e0e0;
+}
+
+body.dark-mode .timeline-year {
+  color: #00b4cc;
+}
+
+body.dark-mode .timeline-place {
+  color: #e0e0e0;
+}
+
+body.dark-mode .timeline-desc {
+  color: #b0b0b0;
+}
+
+body.dark-mode .skill-name,
+body.dark-mode .skill-pct {
+  color: #e0e0e0;
+}
+
+body.dark-mode .skill-bar-track {
+  background: #2a2a2a;
+}
+
+body.dark-mode .skill-bar-fill {
+  background: linear-gradient(90deg, #00b4cc, #00d4ff);
+}
+
+body.dark-mode .contact-label {
+  color: #b0b0b0;
+}
+
+body.dark-mode .contact-value {
+  color: #e0e0e0;
+}
+
+body.dark-mode .socials-title {
+  color: #e0e0e0;
+}
+
+body.dark-mode .footer {
+  background: #1a1a1a;
+  color: #b0b0b0;
+}
+
+body.dark-mode .footer-name {
+  color: #e0e0e0;
+}
+
+body.dark-mode .footer-col-title {
+  color: #00b4cc;
+}
+
+body.dark-mode .footer-col span {
+  color: #b0b0b0;
+}
+
+body.dark-mode .btn-outline,
+body.dark-mode .btn-cyan,
+body.dark-mode .btn-dark {
+  background: rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
+  border-color: #444;
+}
+
+body.dark-mode .btn-outline:hover,
+body.dark-mode .btn-cyan:hover,
+body.dark-mode .btn-dark:hover {
+  background: rgba(0, 180, 204, 0.2);
+  border-color: #00b4cc;
+}
+
+body.dark-mode .mode-btn {
+  background: rgba(40, 40, 40, 0.95);
+}
+
+/* Copy feedback for dark mode */
+.copy-feedback {
+  position: auto;
+  top: 15px;
+  right: 100px;
+  background: #00b4cc;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 2px;
+  font-family: 'Inter', sans-serif;
+  font-size: 5px;
+  z-index: 10000;
+  animation: slideIn 0.3s ease;
+}
+
+body.dark-mode .copy-feedback {
+  background: #00d4ff;
+}
+
+/* Quick feedback animation */
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Responsive toggle */
+@media (max-width: 768px) {
+  .mode-toggle {
+    top: 80px;
+    right: 20px;
+  }
+  
+  .copy-feedback {
+    right: 90px;
   }
 }
